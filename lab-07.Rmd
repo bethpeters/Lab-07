@@ -25,6 +25,9 @@ evals<-read.csv("data/evals.csv", row.names=1)
 
 ```{r viz-score}
 # add code here
+ggplot(data = evals,
+       mapping = aes(x = score)) +
+  geom_histogram(bins = 30)
 ```
 
 *Add your other details and narratives here.*
