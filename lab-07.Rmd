@@ -51,7 +51,9 @@ ggplot(data = evals,
 
 ```
 
-*Add your narrative and other details here.*
+Jitter adds small amounts of random variation to the location of each point.
+The initial plot shows discrete data whereas scatter plots are meant to have continuous data.
+
 
 # Exercise 2: Simple Linear regression with a numerical predictor
 
