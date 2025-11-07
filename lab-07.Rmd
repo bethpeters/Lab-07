@@ -27,10 +27,13 @@ evals<-read.csv("data/evals.csv", row.names=1)
 # add code here
 ggplot(data = evals,
        mapping = aes(x = score)) +
-  geom_histogram(bins = 30)
+  geom_histogram(bins = 20)
+
+evals %>%
+  summarise(median(score), mean(score))
 ```
 
-*Add your other details and narratives here.*
+The distribution is skewed towards students positively rating courses. i calculated the mean to be 4.2 and the median to be 4.3, solidfying the view that students are more likley to rate a course positively.
 
 2.  Visualize and describe the relationship between `score` and `bty_avg` using `geom_point()` to represent the data. 
 
@@ -39,7 +42,10 @@ ggplot(data = evals,
 
 ggplot(data = evals,
        mapping = aes(x = score, y = bty_avg)) +
-  geom_point() +
+  geom_point() 
+
+ggplot(data = evals,
+       mapping = aes(x = score, y = bty_avg)) +
   geom_jitter()
 
 
