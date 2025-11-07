@@ -35,7 +35,14 @@ ggplot(data = evals,
 2.  Visualize and describe the relationship between `score` and `bty_avg` using `geom_point()` to represent the data. 
 
 ```{r scatterplot}
-# add code here
+
+
+ggplot(data = evals,
+       mapping = aes(x = score, y = bty_avg)) +
+  geom_point() +
+  geom_jitter()
+
+
 ```
 
 *Add your narrative and other details here.*
